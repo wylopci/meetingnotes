@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MeetingNotes Studio — Offline Meeting Transcription for Mac</title>
+<meta name="description" content="Meeting transcripts on Apple silicon Macs. Recognition runs entirely offline — the audio never leaves your machine. Taiwanese supported. AI summaries can run on-device. Export to Word and PDF.">
+<meta name="apple-itunes-app" content="app-id=6800615009">
+<link rel="canonical" href="https://wylopci.github.io/meetingnotes/en/">
+<link rel="alternate" hreflang="zh-Hant" href="https://wylopci.github.io/meetingnotes/">
+<link rel="alternate" hreflang="en" href="https://wylopci.github.io/meetingnotes/en/">
+<link rel="alternate" hreflang="x-default" href="https://wylopci.github.io/meetingnotes/">
+<meta property="og:title" content="MeetingNotes Studio — Offline Meeting Transcription for Mac">
+<meta property="og:description" content="Recognition runs entirely on your Mac. The audio never leaves it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wylopci.github.io/meetingnotes/en/">
+<style>
+  :root{
+    --bg:#F7F8FA; --card:#FFFFFF; --ink:#1B1E24; --muted:#616873;
+    --line:#E2E6EC; --accent:#2F5D8A; --accent-ink:#FFFFFF; --chip:#EAEFF5;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#101215; --card:#181B20; --ink:#E9ECF1; --muted:#98A0AC;
+           --line:#282C33; --accent:#7FB1DC; --accent-ink:#12161B; --chip:#1D242C; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    line-height:1.7;font-size:17px}
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  header{padding:14px 0;border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink)}
+  .mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(160deg,#8FB6D8,#2F5D8A);
+    display:grid;place-items:center;flex:none}
+  .mark i{display:block;width:11px;height:15px;border-radius:6px;background:#fff;opacity:.9}
+  .lang{font-size:14px;color:var(--muted)}
+
+  .hero{padding:64px 0 44px}
+  h1{font-size:36px;line-height:1.25;margin:0 0 18px;letter-spacing:-.02em}
+  .lede{font-size:19px;color:var(--muted);margin:0 0 30px}
+  .cta{display:inline-block;background:var(--accent);color:var(--accent-ink);
+    padding:13px 26px;border-radius:10px;font-weight:600}
+  .cta:hover{text-decoration:none;opacity:.92}
+  .note{font-size:14px;color:var(--muted);margin-top:12px}
+
+  section{padding:38px 0;border-top:1px solid var(--line)}
+  h2{font-size:22px;margin:0 0 20px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  .grid{display:grid;gap:20px}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr;gap:22px 28px}}
+  .item p{margin:0;color:var(--muted);font-size:15.5px}
+
+  .why{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 24px 6px}
+  .why p{margin:0 0 18px}
+
+  details{border-bottom:1px solid var(--line);padding:14px 0}
+  details:last-of-type{border-bottom:0}
+  summary{cursor:pointer;font-weight:600;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"+";color:var(--accent);margin-right:10px;font-weight:700}
+  details[open] summary::before{content:"−"}
+  details p{margin:10px 0 0;color:var(--muted);font-size:15.5px}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+  .chips li{background:var(--chip);border-radius:999px;padding:5px 13px;font-size:14px;color:var(--muted)}
+
+  footer{padding:34px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
+  footer a{margin-right:18px}
+  .copy{margin-top:16px;font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <span class="brand"><span class="mark"><i></i></span>MeetingNotes Studio</span>
+    <a class="lang" href="../">繁體中文</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <h1>The meeting ends.<br>The transcript is already on your Mac.</h1>
+    <p class="lede">Speech recognition runs entirely offline — the audio never leaves the machine. Then you decide whether a summary is worth sending anywhere, and even that can run on-device.</p>
+    <a class="cta" href="https://apps.apple.com/app/id6800615009">Download on the Mac App Store</a>
+    <p class="note">Requires an Apple silicon Mac.</p>
+  </div>
+
+  <section>
+    <h2>Why local matters</h2>
+    <div class="why">
+      <p>Nearly every transcription service works by upload: your recording goes to someone else's server and comes back as text. Fine for a casual chat. Not fine when the meeting covered salaries, an acquisition, a customer list, or an unreleased spec — and at many companies, policy simply forbids it.</p>
+      <p>MeetingNotes Studio runs recognition on your Mac, using Apple silicon and either Breeze-ASR-26 or Whisper MLX depending on the language. Audio and transcription never leave the machine. Text is sent out only if you press AI Summary and pick an online model — a step you take deliberately, and can skip entirely by choosing an on-device model.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="item">
+        <h3>Offline recognition, Taiwanese included</h3>
+        <p>Breeze-ASR-26 or Whisper MLX is selected by language. Breeze is trained for Taiwanese contexts, so Taiwanese and mixed Mandarin-English meetings come through.</p>
+      </div>
+      <div class="item">
+        <h3>Record, import, or capture YouTube</h3>
+        <p>Record the room, import M4A, MP3, MP4 and other common audio or video files, or transcribe system audio while YouTube plays in your browser.</p>
+      </div>
+      <div class="item">
+        <h3>Timestamped transcripts</h3>
+        <p>Every segment maps back to a moment in the audio. Click the text, hear that second. Proofreading stops being a guessing game.</p>
+      </div>
+      <div class="item">
+        <h3>AI summaries with decisions and to-dos</h3>
+        <p>Summarize after you have checked the transcript. Pull out key points, decisions and action items — with an on-device model, or an online one using your own API key.</p>
+      </div>
+      <div class="item">
+        <h3>Export into real documents</h3>
+        <p>Word (DOCX), PDF, plain text, and a format that imports cleanly into Google Docs. Nothing is trapped inside the app.</p>
+      </div>
+      <div class="item">
+        <h3>Minimal permissions</h3>
+        <p>Microphone access for recording; screen and system-audio capture only if you turn it on for YouTube transcription. Neither runs in the background on its own.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+
+    <details>
+      <summary>Does it really handle Taiwanese?</summary>
+      <p>Yes. Taiwanese runs through Breeze-ASR-26, a model trained for Taiwanese contexts. It handles Taiwanese and code-switched Mandarin-English-Taiwanese meetings better than general-purpose models — the case most online services still handle poorly.</p>
+    </details>
+
+    <details>
+      <summary>Is my audio uploaded?</summary>
+      <p>No. Recording and recognition both finish on your Mac. The only thing that can leave is transcript text, and only when you press AI Summary with an online model selected. Choose an on-device model and nothing touches the network.</p>
+    </details>
+
+    <details>
+      <summary>Do I need an internet connection or an API key?</summary>
+      <p>Neither, for transcription — no account required. An API key is needed only if you want summaries from an online model; on-device summaries need nothing.</p>
+    </details>
+
+    <details>
+      <summary>Which Macs are supported?</summary>
+      <p>Apple silicon Macs. Offline recognition relies on Apple silicon's machine-learning performance, so Intel Macs are not supported.</p>
+    </details>
+
+    <details>
+      <summary>Can I transcribe lectures or YouTube videos?</summary>
+      <p>Yes. Capture system audio while the video plays in your default browser, or import the file directly — MP4 and other common formats are supported.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Who it's for</h2>
+    <ul class="chips">
+      <li>Meeting minutes</li><li>Interviews</li><li>Qualitative research</li><li>Field work</li>
+      <li>Lecture notes</li><li>Podcast transcripts</li><li>Compliance and audit</li>
+      <li>Teams that cannot upload recordings</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <a href="https://apps.apple.com/app/id6800615009">Mac App Store</a>
+  <a href="https://wylopci.github.io/MeetingNotes-Studio-support/?lang=en">Support</a>
+  <a href="https://wylopci.github.io/namecard/en/">My Card Folio</a>
+  <a href="mailto:mmmmmmm7@gmail.com">Contact</a>
+  <p class="copy">© 2026 Pei Chung Wang</p>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"MeetingNotes Studio",
+  "operatingSystem":"macOS, Apple silicon",
+  "applicationCategory":"BusinessApplication",
+  "url":"https://wylopci.github.io/meetingnotes/en/",
+  "downloadUrl":"https://apps.apple.com/app/id6800615009",
+  "inLanguage":["zh-Hant","zh-Hans","en","ja","ko"],
+  "author":{"@type":"Person","name":"Pei Chung Wang"}
+}
+</script>
+
+</body>
+</html>
