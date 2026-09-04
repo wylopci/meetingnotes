@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MeetingNotes Studio｜Mac 離線語音轉文字與會議逐字稿</title>
+<meta name="description" content="Apple Silicon Mac 上的會議逐字稿工具。辨識完全離線，支援台語，音檔不離開你的電腦。AI 摘要可選本機模型，匯出 Word、PDF。">
+<meta name="apple-itunes-app" content="app-id=6800615009">
+<link rel="canonical" href="https://wylopci.github.io/meetingnotes/">
+<link rel="alternate" hreflang="zh-Hant" href="https://wylopci.github.io/meetingnotes/">
+<link rel="alternate" hreflang="en" href="https://wylopci.github.io/meetingnotes/en/">
+<link rel="alternate" hreflang="x-default" href="https://wylopci.github.io/meetingnotes/">
+<meta property="og:title" content="MeetingNotes Studio｜Mac 離線語音轉文字與會議逐字稿">
+<meta property="og:description" content="辨識完全離線，支援台語，音檔不離開你的 Mac。AI 摘要可選本機模型。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wylopci.github.io/meetingnotes/">
+<style>
+  :root{
+    --bg:#F7F8FA; --card:#FFFFFF; --ink:#1B1E24; --muted:#616873;
+    --line:#E2E6EC; --accent:#2F5D8A; --accent-ink:#FFFFFF; --chip:#EAEFF5;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#101215; --card:#181B20; --ink:#E9ECF1; --muted:#98A0AC;
+           --line:#282C33; --accent:#7FB1DC; --accent-ink:#12161B; --chip:#1D242C; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Noto Sans TC","PingFang TC","Helvetica Neue",Arial,sans-serif;
+    line-height:1.75;font-size:17px;letter-spacing:.01em}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  header{padding:14px 0;border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink)}
+  .mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(160deg,#8FB6D8,#2F5D8A);
+    display:grid;place-items:center;flex:none}
+  .mark i{display:block;width:11px;height:15px;border-radius:6px;background:#fff;opacity:.9}
+  .lang{font-size:14px;color:var(--muted)}
+
+  .hero{padding:64px 0 44px}
+  h1{font-size:34px;line-height:1.35;margin:0 0 18px;letter-spacing:-.01em}
+  .lede{font-size:19px;color:var(--muted);margin:0 0 30px}
+  .cta{display:inline-block;background:var(--accent);color:var(--accent-ink);
+    padding:13px 26px;border-radius:10px;font-weight:600}
+  .cta:hover{text-decoration:none;opacity:.92}
+  .note{font-size:14px;color:var(--muted);margin-top:12px}
+
+  section{padding:38px 0;border-top:1px solid var(--line)}
+  h2{font-size:22px;margin:0 0 20px;letter-spacing:-.01em}
+  h3{font-size:17px;margin:0 0 6px}
+  .grid{display:grid;gap:20px}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr;gap:22px 28px}}
+  .item p{margin:0;color:var(--muted);font-size:15.5px}
+
+  .why{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 24px 6px}
+  .why p{margin:0 0 18px}
+
+  details{border-bottom:1px solid var(--line);padding:14px 0}
+  details:last-of-type{border-bottom:0}
+  summary{cursor:pointer;font-weight:600;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"＋";color:var(--accent);margin-right:10px;font-weight:700}
+  details[open] summary::before{content:"−"}
+  details p{margin:10px 0 0;color:var(--muted);font-size:15.5px}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+  .chips li{background:var(--chip);border-radius:999px;padding:5px 13px;font-size:14px;color:var(--muted)}
+
+  footer{padding:34px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
+  footer a{margin-right:18px}
+  .copy{margin-top:16px;font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <span class="brand"><span class="mark"><i></i></span>MeetingNotes Studio</span>
+    <a class="lang" href="./en/">English</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <h1>會議錄完，逐字稿就在<br>你自己的 Mac 上。</h1>
+    <p class="lede">語音辨識完全離線，音檔不離開這台電腦。支援台語。整理完再決定要不要交給 AI 摘要——而摘要也可以用本機模型跑。</p>
+    <a class="cta" href="https://apps.apple.com/tw/app/id6800615009">在 Mac App Store 下載</a>
+    <p class="note">需要 Apple 晶片的 Mac。</p>
+  </div>
+
+  <section>
+    <h2>為什麼要在本機做</h2>
+    <div class="why">
+      <p>市面上的逐字稿服務幾乎都是上傳制：你的會議錄音送到別人的伺服器，轉完再傳回來。對一般閒聊沒差，但如果那場會議談的是薪資、併購、客戶名單或未上市的產品規格，這個動作本身就是問題——很多公司的資安規範根本不允許。</p>
+      <p>MeetingNotes Studio 把辨識放在你的 Mac 上跑，用 Apple Silicon 的算力，依語言自動選用 Breeze-ASR-26 或 Whisper MLX。音檔和辨識過程都不出這台機器。只有在你按下「AI 摘要」而且選了線上模型時，逐字稿的文字才會送出去——這一步是你自己按的，不按就完全離線。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>它做什麼</h2>
+    <div class="grid">
+      <div class="item">
+        <h3>離線辨識，聽得懂台語</h3>
+        <p>依語言自動選用 Breeze-ASR-26 或 Whisper MLX。Breeze 是針對台灣語境訓練的模型，台語和中英夾雜的會議都吃得下。</p>
+      </div>
+      <div class="item">
+        <h3>錄音、匯入、YouTube 都能轉</h3>
+        <p>可以直接錄現場，也可以匯入 M4A、MP3、MP4 等常見音訊與影片檔；在瀏覽器播 YouTube 時能擷取系統音訊做聽寫。</p>
+      </div>
+      <div class="item">
+        <h3>逐字稿帶時間標記</h3>
+        <p>每一段都對得回音檔的時間點，點文字就跳到那一秒。校稿時不用來回猜位置。</p>
+      </div>
+      <div class="item">
+        <h3>AI 摘要整理重點與待辦</h3>
+        <p>確認逐字稿之後再摘要，整理出重點、決策與待辦事項。模型可以選本機的，也可以用自備 API Key 的線上模型。</p>
+      </div>
+      <div class="item">
+        <h3>匯出成能直接用的檔案</h3>
+        <p>Word（DOCX）、PDF、純文字，以及可匯入 Google Docs 的格式。不是只能在 App 裡看。</p>
+      </div>
+      <div class="item">
+        <h3>權限只要最低限度</h3>
+        <p>錄音需要麥克風權限；YouTube 聽寫需要你主動開啟螢幕與系統音訊擷取。兩者都不會在背景自己啟動。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>常見問題</h2>
+
+    <details>
+      <summary>真的支援台語嗎？</summary>
+      <p>是。台語的辨識走 Breeze-ASR-26，這是針對台灣語境訓練的模型，對台語以及中英台夾雜的會議表現比通用模型好。這也是多數線上逐字稿服務目前處理不好的部分。</p>
+    </details>
+
+    <details>
+      <summary>音檔會被上傳嗎？</summary>
+      <p>不會。錄音與語音辨識都在你的 Mac 上完成。唯一會離開電腦的情況是你按下「AI 摘要」並且選擇線上模型，這時送出的是逐字稿文字，不是音檔；選本機模型則整個流程都不連網。</p>
+    </details>
+
+    <details>
+      <summary>需要網路嗎？需要 API Key 嗎？</summary>
+      <p>轉逐字稿不需要網路，也不需要任何帳號。只有想用線上的 AI 模型做摘要時才需要自備 API Key；用本機模型就不用。</p>
+    </details>
+
+    <details>
+      <summary>哪些 Mac 可以跑？</summary>
+      <p>Apple 晶片的 Mac（M 系列）。離線辨識吃的是 Apple Silicon 的機器學習算力，Intel Mac 不在支援範圍。</p>
+    </details>
+
+    <details>
+      <summary>可以轉線上課程或 YouTube 影片嗎？</summary>
+      <p>可以。在預設瀏覽器播放時擷取系統音訊即可聽寫。也可以先把影片檔匯入，App 支援 MP4 等常見格式。</p>
+    </details>
+
+    <details>
+      <summary>逐字稿可以匯出到哪裡？</summary>
+      <p>Word（DOCX）、PDF、純文字，以及可匯入 Google Docs 的格式。摘要與逐字稿都能一起帶走。</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>適合誰</h2>
+    <ul class="chips">
+      <li>會議紀錄</li><li>訪談與採訪</li><li>質性研究</li><li>田野調查</li>
+      <li>線上課程筆記</li><li>Podcast 逐字稿</li><li>法遵與稽核</li>
+      <li>不能把錄音上雲的組織</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <a href="https://apps.apple.com/tw/app/id6800615009">Mac App Store</a>
+  <a href="https://wylopci.github.io/MeetingNotes-Studio-support/?lang=zh-Hant">技術支援</a>
+  <a href="https://wylopci.github.io/namecard/">我的名片夾</a>
+  <a href="mailto:mmmmmmm7@gmail.com">聯絡開發者</a>
+  <p class="copy">© 2026 Pei Chung Wang</p>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"MeetingNotes Studio",
+  "operatingSystem":"macOS, Apple silicon",
+  "applicationCategory":"BusinessApplication",
+  "url":"https://wylopci.github.io/meetingnotes/",
+  "downloadUrl":"https://apps.apple.com/tw/app/id6800615009",
+  "inLanguage":["zh-Hant","zh-Hans","en","ja","ko"],
+  "author":{"@type":"Person","name":"Pei Chung Wang"}
+}
+</script>
+
+</body>
+</html>
